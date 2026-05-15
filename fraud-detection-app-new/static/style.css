@@ -1,0 +1,217 @@
+/* Professional Enterprise UI */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===============================
+   LIGHT MODE
+=================================*/
+body.light {
+    background-color: #f4f6f9;
+    color: #1e2a38;
+}
+
+/* ===============================
+   DARK MODE
+=================================*/
+body.dark {
+    background-color: #121826;
+    color: #e5e7eb;
+}
+
+/* ===============================
+   LAYOUT
+=================================*/
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 1100px;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .glass-card {
+    background-color: #1f2937;
+    box-shadow: none;
+}
+
+/* ===============================
+   HEADINGS
+=================================*/
+.title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 35px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+body.dark .subtitle {
+    color: #9ca3af;
+}
+
+/* ===============================
+   INPUT FIELDS
+=================================*/
+.modern-input {
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e3e6ea;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.modern-input:focus {
+    border-color: #2f80ed;
+    outline: none;
+    box-shadow: none;
+}
+
+body.dark .modern-input {
+    background-color: #111827;
+    border: 1px solid #374151;
+    color: #e5e7eb;
+}
+
+body.dark .modern-input::placeholder {
+    color: #9ca3af;
+}
+
+/* ===============================
+   BUTTONS
+=================================*/
+.modern-btn {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #1e2a38;
+    border: none;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.modern-btn:hover {
+    background-color: #111827;
+}
+
+.btn-outline-light {
+    border-radius: 8px;
+    border: 1px solid #2f80ed;
+    color: #2f80ed;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #2f80ed;
+    color: white;
+}
+
+body.dark .btn-outline-light {
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+}
+
+body.dark .btn-outline-light:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* ===============================
+   RESULT BOXES
+=================================*/
+.result-box {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Light Mode Alerts */
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* Dark Mode Alerts */
+body.dark .alert-danger {
+    background-color: #7f1d1d;
+    color: #fecaca;
+}
+
+body.dark .alert-success {
+    background-color: #14532d;
+    color: #bbf7d0;
+}
+
+/* ===============================
+   ERROR BOX
+=================================*/
+.error-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fef3c7;
+    border-radius: 8px;
+    color: #92400e;
+    font-size: 14px;
+}
+
+body.dark .error-box {
+    background-color: #78350f;
+    color: #fde68a;
+}
+
+/* ===============================
+   THEME TOGGLE
+=================================*/
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 25px;
+    }
+}
